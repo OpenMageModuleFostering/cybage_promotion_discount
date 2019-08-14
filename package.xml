@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>Cybage_Promotion_Discount</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>The Promotion Discount plug-in supports bifurcation of discount. It displays the catalog price discount and shopping cart discount separately.</summary>
+    <description>The Promotion Discount plug-in supports bifurcation of discount. It displays the catalog price discount and shopping cart discount separately.&#xD;
+Features&#xD;
+&#x2022;	Customer gets the clarity of promotion discount on their orders.&#xD;
+&#x2022;	Seller can manage and visualize the discount amount of their products.&#xD;
+&#x2022;	Easy reporting of the discount amount for an order.</description>
+    <notes>After installation of the Marketplace plugin please clear the cache.</notes>
+    <authors><author><name>Cybage Software Pvt. Ltd.</name><user>cybage</user><email>Support_Magento@cybage.com</email></author></authors>
+    <date>2014-06-11</date>
+    <time>13:28:35</time>
+    <contents><target name="magecommunity"><dir name="Cybage"><dir name="Checkout"><dir name="Model"><file name="Observer.php" hash="f8298d0bc0fa0b94a61ad580c0bdb8eb"/></dir><dir name="etc"><file name="config.xml" hash="4c54937ef6c92ed30f501a29bf177203"/><file name="system.xml" hash="508c433273cee2a5fc7ec73a58175450"/></dir><dir name="sql"><dir name="checkout_setup"><file name="mysql4-upgrade-1.6.0.0-1.6.0.1.php" hash="96507eac175d72987108244e8e6cf834"/></dir></dir></dir><dir name="Sales"><dir name="Block"><dir name="Order"><dir name="Creditmemo"><file name="Totals.php" hash="835a93a04bad901c183ed854a43d8723"/></dir><dir name="Invoice"><file name="Totals.php" hash="2104d7891f6fc7ebf5c9a95d081273f2"/></dir><file name="Totals.php" hash="4aa909092d47f764ff5c02e773235119"/></dir></dir><dir name="Model"><dir name="Order"><file name="Creditmemo.php" hash="c92dca168c2c87282a8867d160da3929"/></dir><dir name="Quote"><dir name="Address"><dir name="Total"><file name="Coupon.php" hash="712be154e62e7ebcc34b639a05878a6b"/></dir></dir></dir></dir><dir name="etc"><file name="config.xml" hash="2d67d96b2b6d7a133c02ef9f1cbc804d"/></dir></dir><dir name="SalesRule"><dir name="Model"><dir name="Quote"><file name="Discount.php" hash="c5186ce798cc365fe643bec02b6ef326"/></dir></dir><dir name="etc"><file name="config.xml" hash="5822ce45d010dec5aa004d0b0a2c822d"/></dir></dir><dir name="Tax"><dir name="Block"><dir name="Checkout"><file name="Discount.php" hash="43533a00ed2aed9c49e88dba75ceb894"/></dir></dir><dir name="etc"><file name="config.xml" hash="0e60bf7531e33435cbb902be578d4e81"/></dir></dir></dir><dir name="Mage"><dir name="Adminhtml"><dir name="Block"><dir name="Sales"><file name="Totals.php" hash="ad6492cd3a95301d9b5961ff66ae6969"/></dir></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="cybage_sales.xml" hash="096bc99d4d391fcc77825f187c145144"/></dir><dir name="template"><dir name="cybage"><dir name="sales"><dir name="order"><dir name="totals"><file name="discount.phtml" hash="8fabdd810b60c1bc115b371f6c01281b"/></dir><file name="totals.phtml" hash="059e34e34869882ed8f86e5c0fabda41"/></dir></dir></dir></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="cybage_sales.xml" hash="b9d9dbfb34cadc6242bc560125b022cc"/></dir><dir name="template"><dir name="cybage"><dir name="sales"><dir name="order"><file name="totals.phtml" hash="e09834526b3385e6e00322c14cb2fd58"/></dir></dir></dir><dir name="cybage_tax"><dir name="checkout"><file name="discount.phtml" hash="7b1d4ec4275cf582a75cdcdb190482bb"/></dir></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Cybage_Checkout.xml" hash="a3efbc90e0d167fbb52cd52ade1d0452"/><file name="Cybage_Sales.xml" hash="8c7a10b96f3ca2b4e0480223803b6574"/><file name="Cybage_SalesRule.xml" hash="987788e7c53618083fe01727dab3aba4"/><file name="Cybage_Tax.xml" hash="88dcfc7e75de1983d4fa0b1730f0a04e"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

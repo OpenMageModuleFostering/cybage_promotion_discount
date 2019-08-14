@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Cybage Promotion Discount Plugin 
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * It is available on the World Wide Web at:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you are unable to access it on the World Wide Web, please send an email
+ * To: Support_Magento@cybage.com.  We will send you a copy of the source file.
+ *
+ * @category   Promotion Discount Plugin
+ * @package    Cybage
+ * @copyright  Copyright (c) 2014 Cybage Software Pvt. Ltd., India
+ *             http://www.cybage.com/pages/centers-of-excellence/ecommerce/ecommerce.aspx
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Cybage Software Pvt. Ltd. <Support_Magento@cybage.com>
+ */
+-->
+<config>
+    <modules>
+        <Cybage_Sales>
+            <version>1.6.0.0</version>
+        </Cybage_Sales>
+    </modules>
+    <global>
+        <blocks>
+            <sales>
+                <rewrite>
+                    <order_totals>Cybage_Sales_Block_Order_Totals</order_totals>
+                    <order_invoice_totals>Cybage_Sales_Block_Order_Invoice_Totals</order_invoice_totals>
+                    <order_creditmemo_totals>Cybage_Sales_Block_Order_Creditmemo_Totals</order_creditmemo_totals>
+                </rewrite>
+            </sales>
+        </blocks>
+        <models>
+            <class>Cybage_Sales_Model</class>
+            <sales>
+                <rewrite>
+                    <order_creditmemo>Cybage_Sales_Model_Order_Creditmemo</order_creditmemo>
+                </rewrite>
+            </sales>
+        </models>
+        <sales>
+            <quote>
+                <totals>
+                    <coupon_discount>
+                        <class>Cybage_Sales_Model_Quote_Address_Total_Coupon</class>
+                        <after>subtotal,freeshipping,tax_subtotal,discount</after>
+                        <before>grand_total</before>
+                    </coupon_discount>
+                </totals>
+            </quote>
+        </sales>
+        <fieldsets>
+            <sales_convert_quote>
+                <coupon_discount><to_order>*</to_order></coupon_discount>
+                <promotional_discount><to_order>*</to_order></promotional_discount>
+                <promo_lable><to_order>*</to_order></promo_lable>
+            </sales_convert_quote>
+         </fieldsets>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <sales>
+                    <file>cybage_sales.xml</file>
+                </sales>
+            </updates>
+        </layout>
+    </adminhtml>
+    <frontend>
+        <layout>
+            <updates>
+                <sales module="Mage_Sales">
+                    <file>cybage_sales.xml</file>
+                </sales>
+            </updates>
+        </layout>
+    </frontend>
+</config>

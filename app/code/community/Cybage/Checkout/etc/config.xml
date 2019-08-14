@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Cybage Promotion Discount Plugin 
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * It is available on the World Wide Web at:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you are unable to access it on the World Wide Web, please send an email
+ * To: Support_Magento@cybage.com.  We will send you a copy of the source file.
+ *
+ * @category   Promotion Discount Plugin
+ * @package    Cybage
+ * @copyright  Copyright (c) 2014 Cybage Software Pvt. Ltd., India
+ *             http://www.cybage.com/pages/centers-of-excellence/ecommerce/ecommerce.aspx
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Cybage Software Pvt. Ltd. <Support_Magento@cybage.com>
+ */
+-->
+<config>
+    <modules>
+        <Cybage_Checkout>
+            <version>1.6.0.1</version>
+        </Cybage_Checkout>
+    </modules>
+    <global>
+        <models>
+            <Cybage_Checkout>
+                <class>Cybage_Checkout_Model_Type_Onepage</class>
+            </Cybage_Checkout>
+        </models>
+        <resources>
+            <checkout_setup>
+                <setup>
+                    <module>Cybage_Checkout</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </checkout_setup>
+            <checkout_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </checkout_write>
+            <checkout_read>
+                <connection>
+                    <use>core_read</use>
+                </connection> 
+            </checkout_read>
+        </resources>
+    </global>
+    <frontend>
+        <events>
+            <salesrule_validator_process>
+                <observers>
+                    <Cybage_Checkout>
+                        <type>singleton</type>
+                        <class>Cybage_Checkout_Model_Observer</class>
+                        <method>discountBifurcation</method>
+                    </Cybage_Checkout>
+                </observers>
+            </salesrule_validator_process>
+        </events>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <promodiscount translate="title">
+                                            <title>Promotional Discount Section</title>
+                                        </promodiscount>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

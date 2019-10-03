@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Cybage_Promotion_Discount",
+    "name": "openmage-module-fostering\/cybage_promotion_discount",
     "type": "magento-module",
-    "license": "Open-Software-License",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "The Promotion Discount plug-in supports bifurcation of discount. It displays the catalog price discount and shopping cart discount separately.",
     "authors": [
